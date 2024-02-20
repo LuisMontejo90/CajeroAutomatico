@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./menu.css">
+    <title>Menu principal</title>
+</head>
+
+<body>
+    <div class="pantalla-menu">
+
+
+        <div class="contendor-pantalla">
+            <div class="alert alert-secondary" role="alert" id="saludo-inicial">
+                A simple secondary alert—check it out!
+            </div>
+
+            <div class="btn-group-vertical" role="group" aria-label="Vertical button group"> <!-- botones main -->
+                <button type="button" class="btn btn-primary" id="consultar-saldo" onclick="consultarSaldo()">Consultar
+                    Saldo</button>
+                <button type="button" class="btn btn-primary" id="retirar" onclick="retirarDinero()">Retirar</button>
+                <button type="button" class="btn btn-primary" id="depositos" onclick="depositar()">Depositos</button>
+                <button type="button" class="btn btn-primary" id="otros-servicios">Salir</button>
+
+                <div class="divpantalla" id="consulta"></div> <!-- saldo disponible -->
+
+                <div class="form-floating mb-3" id="monto-aretirar">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Monto a retirar</label>
+                </div>
+
+
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <!-- botonos de montos -->
+                    <div class="btn-group me-2" role="group" aria-label="First group" id="retirar-montos">
+                        <button type="button" class="btn btn-primary" onclick="retirar200()">$200</button>
+                        <button type="button" class="btn btn-primary" onclick="retirar500()">$500</button>
+                        <button type="button" class="btn btn-primary" onclick="retirar1000()">$1000</button>
+                        <button type="button" class="btn btn-primary" onclick="retirar2000()">$2000</button>
+                    </div>
+
+                    <div class="btnopciones">
+                    <div class="outline-danger"> <button type="button" class="btn btn-outline-danger" id="otro-monto"
+                            onclick="otroMonto()">Retirar</button></div>
+                    <!-- boton para retirar otra cantidad -->
+                    <div class="outline-danger">
+                        <button type="button" class="btn btn-outline-primary" id="depositarM"
+                            onclick="depositarButton()">Depositar</button></div>
+                    <div class="menu-principal"><button type="button" class="btn btn-outline-secondary"
+                            id="menu-principal" onclick="mainmenu()">Menu Principal</button>
+                    </div>
+                    
+                    <!-- boton regresar al menu -->
+                </div>
+
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
